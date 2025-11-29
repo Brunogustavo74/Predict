@@ -1,0 +1,362 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top left, #0f0f0f 30%, #1a1a1a 100%);
+      color: #f1f1f1;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+      color: #fff;
+    }
+header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+ 
+  background: linear-gradient(
+    90deg,
+    #ff1e56,
+    #ff3b6d,
+    #ffffff,
+    #ff3b6d,
+    #ff1e56
+  );
+  background-size: 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: neonMove 5s ease-in-out infinite alternate;
+  text-shadow: 0 0 20px #ff1e56, 0 0 40px #ff1e56, 0 0 60px #ff1e56;
+}
+
+@keyframes neonMove {
+  0% {
+    background-position: 0% 50%;
+    text-shadow: 0 0 15px #ff1e56, 0 0 30px #ff1e56;
+  }
+  50% {
+    background-position: 100% 50%;
+    text-shadow: 0 0 25px #ff3b6d, 0 0 50px #ff3b6d;
+  }
+  100% {
+    background-position: 0% 50%;
+    text-shadow: 0 0 15px #ff1e56, 0 0 30px #ff1e56;
+  }
+}
+
+
+
+    header h2 {
+      font-size: 1.3rem;
+      color: #ccc;
+      font-weight: 400;
+      margin-top: 0.5rem;
+      letter-spacing: 2px;
+    }
+
+   #main {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      width: 90%;
+      max-width: 1200px;
+      margin-bottom: 4rem;
+    }
+
+    .card {
+      background: #1b1b1b;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 30px rgba(255, 30, 86, 0.4);
+    
+    }
+
+    .card img {
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+      transition: opacity 0.3s ease;
+    }
+
+    .card-content {
+      padding: 1.2rem;
+      background: linear-gradient(to top, #1b1b1b 70%, transparent);
+    }
+
+    .card-content h3 {
+      font-size: 1.2rem;
+      color: #ff1e56;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-content p {
+      font-size: 0.9rem;
+      color: #ddd;
+      margin: 0.2rem 0;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 0.8rem;
+      background: #ff1e56;
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn:hover {
+      background: #ff3b6d;
+      box-shadow: 0 0 10px #ff3b6d;
+      
+    }
+
+   
+
+ form {
+      background: #111;
+      border-radius: 20px;
+      padding: 2rem;
+      width: 90%;
+      max-width: 500px;
+      margin-bottom: 3rem;
+      box-shadow: 0 6px 20px rgba(255, 30, 86, 0.15);
+    }
+
+    form h3 {
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #ff1e56;
+      letter-spacing: 1px;
+    }
+
+    form label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: 500;
+      color: #ddd;
+    }
+
+    form input {
+      width: 100%;
+      padding: 10px 12px;
+      margin-top: 0.3rem;
+      border: none;
+      border-radius: 10px;
+      background: #2a2a2a;
+      color: #fff;
+      outline: none;
+      transition: background 0.2s;
+    }
+
+    form input:focus {
+      background: #333;
+      border: 1px solid #ff1e56;
+    }
+
+    form button {
+      margin-top: 1.5rem;
+      width: 100%;
+      padding: 12px;
+      background: #ff1e56;
+      border: none;
+      color: white;
+      font-size: 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    form button:hover {
+      background: #ff3b6d;
+      box-shadow: 0 0 10px #ff3b6d;
+    }
+
+#recarregar{
+  margin-top: 1rem;
+  padding: 10px 20px;
+  background: #ff1e56;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s, box-shadow 0.3s;
+    transition:  0.2s;
+}
+#recarregar:hover {
+  background: #ff3b6d;
+  box-shadow: 0 0 10px #ff3b6d;
+  scale: 1.05;
+  transition:  0.2s;
+}
+
+
+#modal-edit input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 0.3rem;
+  margin-bottom: 0.8rem;
+  border: none;
+  border-radius: 10px;
+  background: #2a2a2a;
+  color: #fff;
+  outline: none;
+  transition: background 0.2s;
+}
+
+#modal-edit input:focus {
+  background: #333;
+  border: 1px solid #ff1e56;
+}
+
+#modal-edit label {
+  display: block;
+  color: #ddd;
+  margin-top: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+
+#modal-edit .modal-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+
+#modal-edit h3 {
+  color: #ff1e56;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-box {
+  background: #1b1b1b;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  width: 90%;
+  max-width: 350px;
+  box-shadow: 0 0 20px #ff1e56;
+}
+
+.modal-box h3 {
+  color: #ff1e56;
+  margin-bottom: 1rem;
+}
+
+.modal-btns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.btn-confirm,
+.btn-cancel {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.btn-confirm {
+  background: #ff1e56;
+  color: white;
+}
+
+.btn-confirm:hover {
+  background: #ff3b6d;
+}
+
+.btn-cancel {
+  background: #444;
+  color: white;
+}
+
+.btn-cancel:hover {
+  background: #666;
+}
+
+
+.btn-edit, .btn-delete {
+  margin-top: 0.5rem;
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.btn-edit {
+  background: #2a89ff;
+  color: white;
+}
+
+.btn-edit:hover {
+  background: #5aa6ff;
+}
+
+.btn-delete {
+  background: #ff1e56;
+  color: white;
+}
+
+.btn-delete:hover {
+  background: #ff3b6d;
+}
+
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+    }
