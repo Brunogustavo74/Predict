@@ -595,3 +595,17 @@ header h1 {
 .dark .toast {
   background: #ff1e56;
 }
+
+.manga-card {
+  max-width: 320px;
+  margin: auto;
+}
+
+
+.manga-card img {
+  width: 100%;
+  height: 250px; 
+  object-fit: cover;
+  max-height: 300px; 
+  border-radius: 10px;
+}
