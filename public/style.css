@@ -360,3 +360,232 @@ header h1 {
         font-size: 2rem;
       }
     }
+    
+    /* ================================
+   🔍 Barra de busca / Filtros / Ordenação
+   ================================ */
+.toolbar-row {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.toolbar-row input,
+.toolbar-row select {
+  padding: 10px 12px;
+  background: #1b1b1b;
+  color: #fff;
+  border: 1px solid #ff1e56;
+  border-radius: 10px;
+  outline: none;
+  font-size: 0.95rem;
+  transition: 0.2s;
+}
+
+.toolbar-row input:focus,
+.toolbar-row select:focus {
+  background: #2a2a2a;
+  box-shadow: 0 0 10px #ff1e56;
+}
+
+#contador {
+  color: #ff1e56;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+
+/* ================================
+   ⭐ Rating (estrelas)
+   ================================ */
+.rating {
+  margin-top: 0.4rem;
+}
+
+.rating span {
+  cursor: pointer;
+  font-size: 1.4rem;
+  color: gold;
+  transition: transform 0.2s;
+}
+
+.rating span:hover {
+  transform: scale(1.2);
+}
+
+
+/* ================================
+   💀 Skeleton Loading
+   ================================ */
+.skeleton-card {
+  width: 100%;
+  height: 340px;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #1d1d1d, #2a2a2a, #1d1d1d);
+  background-size: 200%;
+  animation: skeletonAnim 1s linear infinite;
+}
+
+@keyframes skeletonAnim {
+  0% { background-position: -200px 0; }
+  100% { background-position: 200px 0; }
+}
+
+
+/* ================================
+   📄 Paginação
+   ================================ */
+.paginacao {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 2rem 0;
+}
+
+.paginacao button {
+  padding: 8px 14px;
+  background: #1b1b1b;
+  border: 1px solid #ff1e56;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-weight: 600;
+}
+
+.paginacao button:hover {
+  background: #ff1e56;
+  box-shadow: 0 0 10px #ff3b6d;
+}
+
+.paginacao button.ativo {
+  background: #ff1e56;
+  box-shadow: 0 0 10px #ff3b6d;
+}
+
+
+/* ================================
+   🔔 Toast notifications
+   ================================ */
+#toast-container {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  z-index: 999999;
+}
+
+.toast {
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  color: #fff;
+  background: #ff1e56;
+  box-shadow: 0 0 15px #ff1e56;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+
+/* ================================
+   🖼 Modal de detalhes
+   ================================ */
+.modal-detail {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  z-index: 9999;
+}
+
+.modal-detail.hidden {
+  display: none;
+}
+
+.detail-inner {
+  background: #1b1b1b;
+  border-radius: 20px;
+  padding: 1rem;
+  width: 95%;
+  max-width: 850px;
+  box-shadow: 0 0 25px #ff1e56;
+  position: relative;
+}
+
+.btn-close {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  background: #ff1e56;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-close:hover {
+  background: #ff3b6d;
+  box-shadow: 0 0 10px #ff3b6d;
+}
+
+.detail-body {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.detail-body img {
+  width: 260px;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255,30,86,0.2);
+}
+
+.detail-meta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 240px;
+}
+
+.detail-meta h2 {
+  font-size: 1.8rem;
+  color: #ff1e56;
+  margin-bottom: 1rem;
+}
+
+
+/* ================================
+   🌓 Tema (não muda seu visual)
+   Apenas adiciona suporte!
+   ================================ */
+.dark body {
+  background: radial-gradient(circle at bottom right, #050505 20%, #0d0d0d 100%);
+}
+
+.dark .card,
+.dark form,
+.dark .modal-box,
+.dark .detail-inner {
+  background: #0f0f0f;
+}
+
+.dark input,
+.dark select {
+  background: #1a1a1a !important;
+}
+
+.dark .toast {
+  background: #ff1e56;
+}
