@@ -88,10 +88,9 @@ header h1 {
     }
 
 .card img {
-  width: 100%;          
-  height: auto;         
-  max-height: 340px;
-  object-fit: cover;  
+  width: 100%;
+  height: clamp(180px, 28vw, 340px); 
+  object-fit: cover;
   border-radius: 0;
 }
 
